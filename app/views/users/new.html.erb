@@ -1,1 +1,21 @@
-<p>New User</p>
+<h1>New User</h1>
+<!-- <form accept-charset="UTF-8" action="<%= users_path %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="name">Name</label>
+  <input type="text" name="user[username]">
+  <label for="password">Password</label>
+  <input type="password" name="user[password]">
+  <label for="email">Email</label>
+  <input type="email" name="user[email]">
+  <input type="submit" value="Submit">
+</form> -->
+
+<%= form_tag users_path do %>
+  <%= label_tag :username %>
+  <%= text_field_tag :username %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <%= label_tag :email %>
+  <%= email_field_tag :email %>
+  <%= submit_tag "Create Account" %>
+<% end %>
